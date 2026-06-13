@@ -102,6 +102,8 @@ gcc -O3 -o run run.c -lm
 **Desktop / Server (with OpenMP for parallel matmul):**
 ```bash
 gcc -O3 -fopenmp -o run run.c -lm
+# using clang
+clang -O3 -fopenmp -lm -o run run.c
 ```
 
 ### 4. Run
@@ -132,7 +134,7 @@ gcc -O3 -fopenmp -o run run.c -lm
 ## Python Inference (via Hugging Face)
 
 If you prefer to run inference in Python rather than the bare-metal C engine, you can load the model directly from the Hugging Face Hub using `transformers`.
-
+Slower inference speed.
 ```bash
 pip install torch transformers
 ```
